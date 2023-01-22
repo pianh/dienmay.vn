@@ -1,4 +1,4 @@
 # dienmay.vn
 project start 22 January 2023
-author Duy Anh (pi anh)
+author Duy Anh (pianh)
 contact: aduy644@gmail.com
