@@ -15,7 +15,7 @@
       </li>
       <!-- Menu KHU VỰC QUẢN TRỊ-->
       <li class="nav-item sidebarSubMenu">
-        <a href="#qtvSubMenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle btn btn-primary ">
+        <a href="#qtvSubMenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle btn btn-info ">
           KHU VỰC QUẢN TRỊ
         </a>
         <ul class="collapse " id="qtvSubMenu" >
@@ -29,7 +29,7 @@
 
       <!-- Menu KHU VỰC QUẢN LÝ -->
       <li class="nav-item">
-        <a href="#cdgySubMenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle btn btn-primary">
+        <a href="#cdgySubMenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle btn btn-info">
           KHU VỰC QUẢN LÝ
         </a>
         <ul class="collapse" id="cdgySubMenu">
