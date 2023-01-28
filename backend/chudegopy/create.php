@@ -53,14 +53,9 @@
                     //4. Điều hướng
                     //Điều hướng bằng JavaScrip
                     echo '<script>location.href = "index.php"; </script>';
-
                 }
 
                 ?>
-
-
-
-
             </div>
         
         </div>
