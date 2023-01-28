@@ -9,7 +9,7 @@
 <body>
     <?php include_once __DIR__ . '/../layouts/partials/header.php' ?>
     
-    <div class="container-fluid pb-400">
+    <div class="container-fluid pb-450">
         <div class="row">
             <?php include_once __DIR__ . '/../layouts/partials/sidebar.php' ?>
 
