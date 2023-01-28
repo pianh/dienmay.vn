@@ -18,7 +18,7 @@
 
             <div class="col-md-10 pd-bottom-450">
             </br>
-                <h1>Thêm mới chủ đề góp ý</h1>
+                <h2>Thêm mới chủ đề góp ý</h2>
                 <form name="frmCreate" id="frmCreate" method="post" action="">
                     Tên chủ đề góp ý (*):
                     <br/>
