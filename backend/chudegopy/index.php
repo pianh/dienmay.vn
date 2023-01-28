@@ -63,7 +63,7 @@
                                 <!-- Nút sửa -->
                                 <a href="edit.php?cdgy_ma=<?= $cdgy['cdgy_ma']?>" class="btn btn-warning ">Sửa</a>
                                 <!-- Nút xóa -->
-                                <!-- <a href="delete.php?cdgy_ma=<?= $cdgy['cdgy_ma']?>" class="btn btn-danger">Xóa</a> -->
+                                <!-- <a href="delete.php?cdgy_ma=<?= $cdgy['cdgy_ma']?>" class="btn btn-danger btnDelete">Xóa</a> -->
                                 <button type="button" class="btn btn-danger btnDelete" data-cdgy_ma="<?= $cdgy['cdgy_ma'] ?>">
                                     Xóa
                                 </button>
@@ -86,6 +86,41 @@
 
     <?php include_once __DIR__ . '/../layouts/partials/footer.php' ?>
     <?php include_once __DIR__ . '/../layouts/scripts.php' ?>
-       
+    
+    <script>
+        // Cảnh báo khi xóa
+        // 1. Đăng ký sự kiện click cho các phần tử (element) đang áp dụng class .btnDelete
+        $('.btnDelete').click(function() {
+            // Click hanlder
+            // 2. Sử dụng thư viện SweetAlert để hiện cảnh báo khi bấm nút xóa
+                swal({
+                    title: "Bạn có chắc chắn muốn xóa?",
+                    text: "Một khi đã xóa, không thể phục hồi....",
+                    icon: "warning",
+                    buttons: true,
+                    dangerMode: true,
+                })
+                .then((willDelete) => {
+                    if (willDelete) { // Nếu đồng ý xóa
+
+                        // 3. Lấy giá trị của thuộc tính (custom attribute HTML) 'km_ma'
+                        // var km_ma = $(this).attr('data-km_ma');
+                        var cdgy_ma = $(this).data('cdgy_ma');
+                        var url = "delete.php?cdgy_ma=" + cdgy_ma;
+
+                        // Điều hướng qua trang xóa với REQUEST GET, có tham số km_ma=...
+                        location.href = url;
+                    } else { // Nếu không đồng ý xóa
+                        swal("Cẩn thận hơn nhé!");
+                    }
+                });
+
+        });
+
+    </script>
+
+
+
+
 </body>
 </html>

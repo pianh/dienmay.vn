@@ -16,7 +16,7 @@
             <?php include_once __DIR__ . '/../layouts/partials/sidebar.php' ?>
 
 
-            <div class="col-md-10 pd-bottom-450">
+            <div class="col-md-10">
             </br>
                 <h2>Thêm mới chủ đề góp ý</h2>
                 <form name="frmCreate" id="frmCreate" method="post" action="">
