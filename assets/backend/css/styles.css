@@ -1,0 +1,33 @@
+/* all */
+.pb-450 {
+    padding-bottom: 450px;
+}
+/* end all */
+
+/* background */
+.background-primary {
+    background-color: rgb(255,103,0);
+}
+
+/* sidebar */
+.sidebar_heading {
+    padding-bottom: 5px; 
+    font-size: 1.1rem;
+}
+.sidebar_heading-manage {
+    margin-top: 10px;
+}
+
+.sidebarSubMenu {
+    margin-bottom: 10px;
+}
+
+.sidebarSubMenu-list {
+    margin-top: 5px; 
+    margin-bottom: 3px;
+}
+/* end sidebar*/
+
+/* btn */
+
+/* end btn */
