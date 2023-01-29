@@ -4,6 +4,6 @@
 <!-- Bootstrap JS -->
 <script src="/dienmay.vn/assets/vendor/bootstrap/js/bootstrap.min.js"></script>
 
-<!-- Liên kết thư viện SweetAlert -->
+<!-- SweetAlert JS-->
 <script src="/dienmay.vn/assets/vendor/sweetalert/sweetalert.js"></script>
 <script src="/dienmay.vn/assets/vendor/sweetalert/sweetalert.min.js"></script>
