@@ -1,8 +1,11 @@
-/* all */
+/* padding */
 .pb-450 {
     padding-bottom: 450px;
 }
-/* end all */
+.pb-500 {
+    padding-bottom: 500px;
+}
+/* end padding */
 
 /* background */
 .background-primary {
