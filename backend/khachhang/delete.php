@@ -3,37 +3,35 @@
 <head>
     <?php include_once __DIR__ . '/../layouts/meta.php'; ?>
 
-    <title>Xóa thành viên</title>
+    <title>Xóa khách hàng</title>
 
-    <?php include_once __DIR__ . '/../layouts/style.php'?>
+    <?php include_once __DIR__ . '/../layouts/styles.php'?>
     <style>
     </style>
 </head>
 <body>
     <?php include_once __DIR__ . '/../layouts/partials/header.php' ?>
     
-    <div class="container-fluid pd-bottom-380">
+    <div class="container-fluid pb-450">
         <div class="row">
             <?php include_once __DIR__ . '/../layouts/partials/sidebar.php' ?>
 
 
             <div class="col-md-10">
                 </br>
-                <h1>Xóa thành viên</h1>
+                <h2>Xóa khách hàng</h2>
                 <?php
-                $tvMuonXoa = $_GET['tv_tendangnhap'];
+                $khMuonXoa = $_GET['kh_tendangnhap'];
                 ?>
-
-
-                <form name="frmCreate" id="frmCreate" method="post" action="">
-                    Mã / tên đăng nhập thành viên (*):
+                <form name="frmDelete" id="frmDelete" method="post" action="">
+                    Mã / tên đăng nhập khách hàng (*):
                     <br/>
-                    <input type="text" name="tv_tendangnhap" id="tv_tendangnhap" class="form-control"
-                    value="<?= $tvMuonXoa ?>"
+                    <input type="text" name="kh_tendangnhap" id="kh_tendangnhap" class="form-control"
+                    value="<?= $khMuonXoa ?>"
                     readonly/>
                     <br />
                     <button class="btn btn-danger" name="btnSave" id="btnSave">
-                    Xóa thành viên
+                    Xóa khách hàng
                     </button>
                 </form>
 
@@ -49,8 +47,8 @@
                     //1. Mở kết nối
                     include_once __DIR__ . '/../../dbconnect.php';
                     //2. chuẩn bị câu lệnh
-                    $tv = $_POST['tv_tendangnhap'];
-                    $sql = "DELETE FROM thanhvien WHERE tv_tendangnhap = '$tv';";
+                    $kh = $_POST['kh_tendangnhap'];
+                    $sql = "DELETE FROM khachhang WHERE kh_tendangnhap = '$kh';";
 
                     // debug
                     // var_dump($sql);
