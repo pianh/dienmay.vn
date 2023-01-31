@@ -48,7 +48,7 @@
                 <a href="create.php" class="btn btn-success">Thêm mới</a>
                 </br></br>
                 <table class="table table-bordered table-hover">
-                        <thead class="table-info">
+                        <thead class="table-info text-center">
                             <tr>
                                 <th>Mã chủ đề góp ý</th>
                                 <th>Tên chủ đề góp ý</th>
