@@ -71,7 +71,7 @@
                             <td>
                                 <a href="edit.php?vsp_ma=<?= $video['vsp_ma'] ?>" class="btn btn-warning">Sửa</a>
                                 <!-- <a href="delete.php?hsp_ma=<?= $video['vsp_ma'] ?>" class="btn btn-danger">Xóa</a> -->
-                                <button type="button" class="btn btn-danger btnDelete" data-hsp_ma="<?= $video['vsp_ma'] ?>">
+                                <button type="button" class="btn btn-danger btnDelete" data-vsp_ma="<?= $video['vsp_ma'] ?>">
                                     Xóa
                                 </button>
                             </td>
@@ -111,8 +111,8 @@
 
                    // 3. Lấy giá trị của thuộc tính (custom attribute HTML) 'km_ma'
                    // var km_ma = $(this).attr('data-km_ma');
-                   var hsp_ma = $(this).data('hsp_ma');
-                   var url = "delete.php?hsp_ma=" + hsp_ma;
+                   var vsp_ma = $(this).data('vsp_ma');
+                   var url = "delete.php?vsp_ma=" + vsp_ma;
 
                    // Điều hướng qua trang xóa với REQUEST GET, có tham số km_ma=...
                    location.href = url;
