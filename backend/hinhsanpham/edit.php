@@ -104,12 +104,12 @@
                                 echo 'File Upload Bị Lỗi'; die;
                             } else {
                                     //5. XÓA FILE ẢNH ĐỂ TRÁNH RÁC
-                                    $filePath = __DIR__ . '/../../assets/uploads/images/' .$dataHKH_MuonSua['hkh_tentaptin'];
+                                    $filePath = __DIR__ . '/../../assets/uploads/images/' .$datahsp_MuonSua['hsp_tentaptin'];
                                     unlink($filePath);
                                 // Để tránh trường hợp có 2 người dùng cùng lúc upload tập tin trùng tên nhau
                                 // Cách giải quyết đơn giản là chúng ta sẽ ghép thêm ngày giờ vào tên file
-                                $hkh_tentaptin = $_FILES['hsp_tentaptin']['name'];
-                                $tentaptin = date('YmdHis') . '_' . $hkh_tentaptin; //20200530154922_hoahong.jpg
+                                $hsp_tentaptin = $_FILES['hsp_tentaptin']['name'];
+                                $tentaptin = date('YmdHis') . '_' . $hsp_tentaptin; //20200530154922_hoahong.jpg
                 
                                 // Tiến hành di chuyển file từ thư mục tạm trên server vào thư mục chúng ta muốn chứa các file uploads
                 
