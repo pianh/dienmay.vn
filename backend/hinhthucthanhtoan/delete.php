@@ -38,7 +38,7 @@
             ?>
 
 
-            <form name="frmCreate" id="frmCreate" method="post" action="">
+            <form name="frmDelete" id="frmDelete" method="post" action="">
                 Mã/ID hình thức thanh toán (*):
                 <br/>
                 <input type="text" name="httt_ma" id="httt_ma" readonly class="form-control"
