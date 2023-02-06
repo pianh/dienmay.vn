@@ -7,3 +7,6 @@
 <!-- SweetAlert JS-->
 <script src="/dienmay.vn/assets/vendor/sweetalert/sweetalert.js"></script>
 <script src="/dienmay.vn/assets/vendor/sweetalert/sweetalert.min.js"></script>
+
+<!-- Chart JS-->
+<script src="/dienmay.vn/assets/vendor/chartjs/chart.min.js"></script>

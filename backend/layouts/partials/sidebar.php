@@ -62,10 +62,10 @@
       </li>
       <!-- End Menu KHU VỰC -->
 
-      <!-- Menu KHU VỰC QUẢN LÝ -->
+      <!-- Menu KHU VỰC NHÂN VIÊN -->
       <li class="nav-item">
         <a href="#cdgySubMenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle btn btn-info">
-          KHU VỰC QUẢN LÝ
+          KHU VỰC NHÂN VIÊN
         </a>
         <ul class="collapse" id="cdgySubMenu">
           <li class="nav-item sidebarSubMenu-list">
