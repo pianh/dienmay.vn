@@ -51,12 +51,12 @@
                     <!-- right -->
                     <div class="grid-item col-md-6 "style="background-color: #fff;" >
                         <div class="top-title ">
-                            <a href="/dienmay.vn/backend/login.php" title="Đăng nhập" class="active">Đăng nhập</a>
-                            <a href="/dienmay.vn/backend/register.php" title="Đăng ký" class="top-title--register">Đăng ký</a>
+                            <a href="/dienmay.vn/backend/auth/login.php" title="Đăng nhập" class="active">Đăng nhập</a>
+                            <a href="/dienmay.vn/backend/auth/register.php" title="Đăng ký" class="top-title--register">Đăng ký</a>
                         </div>
                         <form action="" class="frmLogin" id="frmLogin">
-                            <div class="box box-username">
-                                <input type="email" name="" id="username" class="form-control" placeholder="Email đăng nhập*">
+                            <div class="box box-email">
+                                <input type="email" name="" id="email" class="form-control" placeholder="Email đăng nhập*">
                             </div>
                             <div class="box box-password">
                                 <input type="password" name="" id="password" class="form-control" placeholder="Mật khẩu*" ></input>
@@ -66,11 +66,11 @@
                                     <input type="checkbox" id="remember-me" class="ml-3">
                                     <label for="remember-me" >Ghi nhớ tôi</label> 
                                 </div>
-                                <a href="https://didongthongminh.vn/quen-mat-khau" title="Quên mật khẩu?" class="forgot-password mr-2">
+                                <a href="https://didongthongminh.vn/quen-mat-khau" title="Quên mật khẩu?" class="forgot-password mr-3">
                                 Quên mật khẩu?
                                 </a>
                             </div>
-                            <div class="box">
+                            <div class="box-login">
                                 <a href="" class="submitLogin submit-btn">Đăng nhập</a>
                             </div>
                         </form>
@@ -79,8 +79,8 @@
                             Hoặc đăng nhập bằng
                             <span></span>
                         </div>
-                        <a href="" class="login-google login-social">Google</a>
-                        <a href="" class="login-facebook login-social">Facebook</a>
+                        <a href="" class="login-google login-social"><i class="fa-brands fa-google-plus"></i>  Google</a>
+                        <a href="" class="login-facebook login-social"><i class="fa-brands fa-facebook"></i>  Facebook</a>
                         <div class="note text-center">
                             <p>Điện máy Cần Thơ cam kết bảo mật và sẽ không bao giờ đăng hay chia sẻ thông tin mà chưa có được sự đồng ý của bạn!</p>
                         </div>
