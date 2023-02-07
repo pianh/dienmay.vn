@@ -103,17 +103,19 @@
     
 }
 
+.top-title--login:hover {
+    color: var(--primary-color);
+}
+
 .top-title--register:hover {
     color: var(--primary-color);
 }
 
 .box {
-    margin-bottom: 15px;
-    padding: 0 20px;
+    margin: 10px 0px;
 }
 
 .box input {
-    
     color: #333333;
     font-size: 16px;
     height: 40px;
@@ -122,7 +124,8 @@
     border-radius: 5px;
     
 }
-.box-username, .box-password {
+.box-username, .box-password, .box-fullname, 
+.box-phone-number, .box-email {
     padding: 0 14px;
 }
 
@@ -137,17 +140,19 @@
 }
 
 .forgot-password {
+
     font-size: 16px;
     margin-top: 10px;
     color: var(--primary-color);
     transition: 0.1s ease-in-out;
 }
+
+
 .forgot-password:hover {
     text-decoration: none;
 }
 
-.box .submit-btn {
-    width: 100%;
+.box-login .submit-btn {
     height: 40px;
     display: flex;
     align-items: center;
@@ -157,15 +162,15 @@
     color: var(--white-color);
     font-size: 16px;
     margin-top: 20px;
-    padding: 5px 50px;
     font-weight: bold;
     text-transform: uppercase;
     text-decoration: none;
-    transition: 0.1s ease-in-out; 
-    padding: 0 20px;
+    transition: 0.1s ease-in-out;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
-.box .submit-btn:hover {
+.box-login .submit-btn:hover {
     background: var(--light-orange-color);
 }
 
@@ -182,7 +187,7 @@
 }
 
 .wrapper span {
-    width: 120px;
+    width: 100px;
     height: 1px;
     background: #ccc;
 }
@@ -207,8 +212,11 @@
     text-transform: uppercase;
     color: #fff;
     position: relative;
-    margin-top: 20px;
-    transition: 0.1s ease-in-out; 
+    margin-top: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 0px;
+    transition: 0.1s ease-in-out;
 }
 
 .login-social:hover {
@@ -216,6 +224,7 @@
     opacity: 0.8;
     text-decoration: none;
 }
+
 
 .grid-members .note {
     margin-top: 30px;
@@ -225,13 +234,29 @@
 }
 
 
-
-
-
-
-
-
-
-
 /* end login */
 
+/* register */
+.box-register .submit-btn {
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--primary-color);
+    border-radius: 5px;
+    color: var(--white-color);
+    font-size: 16px;
+    margin-top: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: 0.1s ease-in-out;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.box-register .submit-btn:hover {
+    background: var(--light-orange-color);
+}
+
+/* end register */
