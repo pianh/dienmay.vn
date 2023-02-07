@@ -68,6 +68,10 @@
     margin-bottom: 10px;
 }
 
+.grid-members .grid-item:nth-child(1) ul li svg {
+    margin-top: 4px;
+    margin-right: 4px;
+}
 
 .top-title a.active {
     font-weight: bold;
@@ -79,7 +83,7 @@
     display: flex;
     align-items: center;
     margin-bottom: 32px;
-    padding-top: 18px;
+    padding-top: 22px;
 }
 
 .top-title a {
@@ -126,6 +130,10 @@
     display: flex;
     justify-content: space-between;
     
+}
+
+.box-forgot .box-remember {
+    margin-top: 10px;
 }
 
 .forgot-password {
@@ -178,6 +186,52 @@
     height: 1px;
     background: #ccc;
 }
+
+.login-social.login-google {
+    background: #D54B3D;
+}
+
+.login-social.login-facebook {
+    background: #1877F2;
+}
+
+.login-social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: normal;
+    height: 40px;
+    border-radius: 5px;
+    font-weight: 700;
+    font-size: 18px;
+    text-transform: uppercase;
+    color: #fff;
+    position: relative;
+    margin-top: 20px;
+    transition: 0.1s ease-in-out; 
+}
+
+.login-social:hover {
+    color: #fff;
+    opacity: 0.8;
+    text-decoration: none;
+}
+
+.grid-members .note {
+    margin-top: 30px;
+    font-size: 18px;
+    line-height: 30px;
+    color: #333333;
+}
+
+
+
+
+
+
+
+
+
 
 /* end login */
 
