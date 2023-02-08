@@ -128,8 +128,8 @@ EOT;
                         WHERE dh_ma= $ma;
 EOT;
                         //debug
-                        var_dump($sql);
-                        die;
+                        // var_dump($sql);
+                        // die;
 
                         //3. Thực thi
                         mysqli_query($conn, $sql);
