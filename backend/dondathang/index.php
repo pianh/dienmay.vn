@@ -30,7 +30,7 @@
                     // Sử dụng HEREDOC của PHP để tạo câu truy vấn SQL với dạng dễ đọc, thân thiện với việc bảo trì code
                     $sql = <<<EOT
     SELECT  ddh.dh_ma, ddh.dh_ngaylap, ddh.dh_noigiao, ddh.dh_trangthaithanhtoan, httt.httt_ten, kh.kh_ten, kh.kh_dienthoai,
-        SUM(spddh.sp_dh_dongia) AS TongThanhTien
+        SUM(spddh.sp_dh_dongia * spddh.sp_dh_soluong ) AS TongThanhTien
     FROM dondathang ddh
     JOIN hinhthucthanhtoan httt ON httt.httt_ma = ddh.httt_ma
     JOIN khachhang kh ON kh.kh_tendangnhap = ddh.kh_tendangnhap
