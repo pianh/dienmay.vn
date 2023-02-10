@@ -100,7 +100,7 @@ EOT;
                         Tài khoản thanh toán:
                         <input type="text" name="kh_tendangnhap" id="kh_tendangnhap"
                             value="<?= $dataDongMuonSua['kh_tendangnhap'] ?>"
-                        class="form-control"
+                        class="form-control" readonly
                         />
 
                         </br>
