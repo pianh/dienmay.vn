@@ -52,9 +52,9 @@
                             <a href="/dienmay.vn/assets/templates/words/danhsachkhachhang.docx">Tải File Word danh sách khách hàng</a>
                         </td>
                         <td>
-                            <a href="/dienmay.vn/backend/xuatbaocao/khachhang/pdf-vendor.php" class="btn btn-success" target="_blank">Xuất PDF</a>
+                            <a href="/dienmay.vn/backend/xuatbaocao/khachhang/mpdf-vendor.php" class="btn btn-success" target="_blank">Xuất PDF</a>
                             <br /><br />
-                            <a href="/dienmay.vn/assets/templates/pdfs/danhsachkhachhang.pdf">Tải File PDF danh sách khách hàng</a>
+                            <a href="/dienmay.vn/assets/templates/pdfs/danhsachkhachhang.pdf" target="_blank">Tải File PDF danh sách khách hàng</a>
                         </td>
 
                     </tr>
