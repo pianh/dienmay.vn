@@ -44,7 +44,9 @@
                         <td>
                             <a href="/dienmay.vn/backend/xuatbaocao/khachhang/excel-vendor.php" class="btn btn-success" target="_blank">Xuất Excel</a>
                             <br /><br />
-                            <a href="/dienmay.vn/assets/templates/excels/danhsachkhachhang.excel">Tải File Excel danh sách khách hàng</a>
+                            <!-- <a href="/dienmay.vn/backend/xuatbaocao/khachhang/danhsachkhachhang.xlsx" class="btn btn-success" target="_blank">Xuất Excel</a> -->
+                            
+                            <a href="/dienmay.vn/assets/templates/excels/danhsachkhachhang.xlsx">Tải File Excel danh sách khách hàng</a>
                         </td>
                         <td>
                             <a href="/dienmay.vn/backend/xuatbaocao/khachhang/word-vendor.php" class="btn btn-success" target="_blank">Xuất Word</a>
