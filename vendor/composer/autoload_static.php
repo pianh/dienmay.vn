@@ -7,6 +7,7 @@ namespace Composer\Autoload;
 class ComposerStaticInit9f6b6fab4c9b4a305ccf8c43b9568b3f
 {
     public static $files = array (
+        '2cffec82183ee1cea088009cef9a6fc3' => __DIR__ . '/..' . '/ezyang/htmlpurifier/library/HTMLPurifier.composer.php',
         '6124b4c8570aa390c21fafd04a26c69f' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/deep_copy.php',
     );
 
@@ -15,15 +16,24 @@ class ComposerStaticInit9f6b6fab4c9b4a305ccf8c43b9568b3f
         array (
             'setasign\\Fpdi\\' => 14,
         ),
+        'Z' => 
+        array (
+            'ZipStream\\' => 10,
+        ),
         'P' => 
         array (
+            'Psr\\SimpleCache\\' => 16,
             'Psr\\Log\\' => 8,
             'Psr\\Http\\Message\\' => 17,
+            'Psr\\Http\\Client\\' => 16,
             'PhpOffice\\PhpWord\\' => 18,
+            'PhpOffice\\PhpSpreadsheet\\' => 25,
         ),
         'M' => 
         array (
+            'MyCLabs\\Enum\\' => 13,
             'Mpdf\\' => 5,
+            'Matrix\\' => 7,
         ),
         'L' => 
         array (
@@ -37,12 +47,24 @@ class ComposerStaticInit9f6b6fab4c9b4a305ccf8c43b9568b3f
         array (
             'DeepCopy\\' => 9,
         ),
+        'C' => 
+        array (
+            'Complex\\' => 8,
+        ),
     );
 
     public static $prefixDirsPsr4 = array (
         'setasign\\Fpdi\\' => 
         array (
             0 => __DIR__ . '/..' . '/setasign/fpdi/src',
+        ),
+        'ZipStream\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/maennchen/zipstream-php/src',
+        ),
+        'Psr\\SimpleCache\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/psr/simple-cache/src',
         ),
         'Psr\\Log\\' => 
         array (
@@ -51,14 +73,31 @@ class ComposerStaticInit9f6b6fab4c9b4a305ccf8c43b9568b3f
         'Psr\\Http\\Message\\' => 
         array (
             0 => __DIR__ . '/..' . '/psr/http-message/src',
+            1 => __DIR__ . '/..' . '/psr/http-factory/src',
+        ),
+        'Psr\\Http\\Client\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/psr/http-client/src',
         ),
         'PhpOffice\\PhpWord\\' => 
         array (
             0 => __DIR__ . '/..' . '/phpoffice/phpword/src/PhpWord',
         ),
+        'PhpOffice\\PhpSpreadsheet\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/phpoffice/phpspreadsheet/src/PhpSpreadsheet',
+        ),
+        'MyCLabs\\Enum\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/myclabs/php-enum/src',
+        ),
         'Mpdf\\' => 
         array (
             0 => __DIR__ . '/..' . '/mpdf/mpdf/src',
+        ),
+        'Matrix\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/markbaker/matrix/classes/src',
         ),
         'Laminas\\Escaper\\' => 
         array (
@@ -72,10 +111,25 @@ class ComposerStaticInit9f6b6fab4c9b4a305ccf8c43b9568b3f
         array (
             0 => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy',
         ),
+        'Complex\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/markbaker/complex/classes/src',
+        ),
+    );
+
+    public static $prefixesPsr0 = array (
+        'H' => 
+        array (
+            'HTMLPurifier' => 
+            array (
+                0 => __DIR__ . '/..' . '/ezyang/htmlpurifier/library',
+            ),
+        ),
     );
 
     public static $classMap = array (
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
+        'Stringable' => __DIR__ . '/..' . '/myclabs/php-enum/stubs/Stringable.php',
     );
 
     public static function getInitializer(ClassLoader $loader)
@@ -83,6 +137,7 @@ class ComposerStaticInit9f6b6fab4c9b4a305ccf8c43b9568b3f
         return \Closure::bind(function () use ($loader) {
             $loader->prefixLengthsPsr4 = ComposerStaticInit9f6b6fab4c9b4a305ccf8c43b9568b3f::$prefixLengthsPsr4;
             $loader->prefixDirsPsr4 = ComposerStaticInit9f6b6fab4c9b4a305ccf8c43b9568b3f::$prefixDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInit9f6b6fab4c9b4a305ccf8c43b9568b3f::$prefixesPsr0;
             $loader->classMap = ComposerStaticInit9f6b6fab4c9b4a305ccf8c43b9568b3f::$classMap;
 
         }, null, ClassLoader::class);
