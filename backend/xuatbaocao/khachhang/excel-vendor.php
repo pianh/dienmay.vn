@@ -48,7 +48,7 @@ $oddRow = [
 $spreadsheet = new Spreadsheet();
 
 include_once __DIR__ . '/../../../dbconnect.php';
-$sqlSelectkhachhang = "SELECT * FROM khachhang";
+$sqlSelectkhachhang = "SELECT * FROM viewDanhSachKhachHang";
 $result = mysqli_query($conn, $sqlSelectkhachhang);
 
 
@@ -133,4 +133,5 @@ $spreadsheet->getActiveSheet()->setAutoFilter("A".$firstRow.":F".$lastRow);
 
 
 $writer = new Xlsx($spreadsheet);
-$writer->save('danhsachkhachhang.xlsx');
+$filePath = __DIR__ . '/../../../assets/templates/excels/danhsachkhachhang.xlsx';
+$writer->save($filePath);
