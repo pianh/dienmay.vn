@@ -8,7 +8,7 @@ include_once __DIR__ . '/../../../vendor/autoload.php';
 //1. Mở kết nối
 include_once __DIR__ . '/../../../dbconnect.php';
 //2. Chuẩn bị câu lệnh
-$sqlSelectkhachhang = "SELECT * FROM khachhang";
+$sqlSelectkhachhang = "SELECT * FROM viewDanhSachKhachHang";
 
 $result = mysqli_query($conn, $sqlSelectkhachhang);
 //4. Phân tách thành array PHP
