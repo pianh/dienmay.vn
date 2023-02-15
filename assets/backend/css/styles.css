@@ -13,6 +13,7 @@
 .pb-500 {
     padding-bottom: 500px;
 }
+
 /* end padding */
 
 /* background */
@@ -37,11 +38,32 @@
     margin-top: 5px; 
     margin-bottom: 3px;
 }
+
+.pd-0 {
+    padding: 0px;
+}
+
+.list-category a {
+    text-decoration: none;
+}
+
 /* end sidebar*/
 
-/* btn */
+/* Header */
+.titlehomepage-header {
+    font-size: 20px;
+}
 
-/* end btn */
+.username-login {
+    font-size: 17px;
+}
+
+.logo-header {
+    max-height: 60px;
+}
+
+/* End Header */
+
 
 /* login */
 .grid-members {
@@ -154,10 +176,12 @@
 
 .box-login .submit-btn {
     height: 40px;
+    min-width: 405px;
     display: flex;
     align-items: center;
     justify-content: center;
     background: var(--primary-color);
+    border: none;
     border-radius: 5px;
     color: var(--white-color);
     font-size: 16px;
@@ -239,10 +263,12 @@
 /* register */
 .box-register .submit-btn {
     height: 40px;
+    min-width: 405px;
     display: flex;
     align-items: center;
     justify-content: center;
     background: var(--primary-color);
+    border: none;
     border-radius: 5px;
     color: var(--white-color);
     font-size: 16px;
