@@ -18,65 +18,108 @@
         <a href="#qtvSubMenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle btn btn-info ">
           KHU VỰC QUẢN TRỊ
         </a>
-        <ul class="collapse " id="qtvSubMenu" >
-          <li class="nav-item sidebarSubMenu-list" >
-            <a href="/dienmay.vn/backend/khachhang/index.php">Khách hàng</a>
+        <ul class="collapse pd-0" id="qtvSubMenu" >
+          <li class="nav-item sidebarSubMenu-list btn btn-light list-category" >
+            <a href="/dienmay.vn/backend/khachhang/index.php">Danh mục Khách hàng</a>
           </li>
-          <li class="nav-item sidebarSubMenu-list" >
-            <a href="/dienmay.vn/backend/chudegopy/index.php">Chủ đề GY</a>
+          <li class="nav-item sidebarSubMenu-list btn btn-light list-category" >
+            <a href="/dienmay.vn/backend/chudegopy/index.php">Danh mục Chủ đề GY</a>
           </li>
-          <li class="nav-item sidebarSubMenu-list" >
-            <a href="/dienmay.vn/backend/gopy/index.php">Góp ý</a>
+          <li class="nav-item sidebarSubMenu-list btn btn-light list-category" >
+            <a href="/dienmay.vn/backend/gopy/index.php">Danh mục Góp ý</a>
           </li>
-          <li class="nav-item sidebarSubMenu-list" >
-            <a href="/dienmay.vn/backend/dondathang/index.php">Đơn đặt hàng</a>
+          <li class="nav-item sidebarSubMenu-list btn btn-light list-category" >
+            <a href="/dienmay.vn/backend/dondathang/index.php">Danh mục Đơn đặt hàng</a>
           </li>
-          <li class="nav-item sidebarSubMenu-list" >
-            <a href="/dienmay.vn/backend/hinhsanpham/index.php">Hình sản phẩm</a>
+          <li class="nav-item sidebarSubMenu-list btn btn-light list-category" >
+            <a href="/dienmay.vn/backend/hinhsanpham/index.php">Danh mục Hình SP</a>
           </li>
-          <li class="nav-item sidebarSubMenu-list" >
-            <a href="/dienmay.vn/backend/videosanpham/index.php">Video sản phẩm</a>
+          <li class="nav-item sidebarSubMenu-list btn btn-light list-category" >
+            <a href="/dienmay.vn/backend/videosanpham/index.php">Danh mục Video SP</a>
           </li>
-          <li class="nav-item sidebarSubMenu-list" >
-            <a href="/dienmay.vn/backend/hinhthucthanhtoan/index.php">Hình thức thanh toán</a>
+          <li class="nav-item sidebarSubMenu-list btn btn-light list-category" >
+            <a href="/dienmay.vn/backend/hinhthucthanhtoan/index.php">Danh mục HTTT</a>
           </li>
-          <li class="nav-item sidebarSubMenu-list" >
-            <a href="/dienmay.vn/backend/khuyenmai/index.php">Khuyến mãi</a>
+          <li class="nav-item sidebarSubMenu-list btn btn-light list-category" >
+            <a href="/dienmay.vn/backend/khuyenmai/index.php">Danh mục Khuyến mãi</a>
           </li>
-          <li class="nav-item sidebarSubMenu-list" >
-            <a href="/dienmay.vn/backend/loaisanpham/index.php">Loại sản phẩm</a>
+          <li class="nav-item sidebarSubMenu-list btn btn-light list-category" >
+            <a href="/dienmay.vn/backend/loaisanpham/index.php">Danh mục Loại sản phẩm</a>
           </li>
-          <li class="nav-item sidebarSubMenu-list" >
-            <a href="/dienmay.vn/backend/nhasanxuat/index.php">Nhà sản xuất</a>
+          <li class="nav-item sidebarSubMenu-list btn btn-light list-category" >
+            <a href="/dienmay.vn/backend/nhasanxuat/index.php">Danh mục Nhà sản xuất</a>
           </li>
-          <li class="nav-item sidebarSubMenu-list" >
-            <a href="/dienmay.vn/backend/sanpham/index.php">Sản phẩm</a>
+          <li class="nav-item sidebarSubMenu-list btn btn-light list-category" >
+            <a href="/dienmay.vn/backend/sanpham/index.php">Danh mục Sản phẩm</a>
           </li>
-          <li class="nav-item sidebarSubMenu-list" >
-            <a href="/dienmay.vn/backend/sanpham-dondathang/index.php">Sản phẩm - Đơn đặt hàng</a>
+          <li class="nav-item sidebarSubMenu-list btn btn-light list-category" >
+            <a href="/dienmay.vn/backend/sanpham-dondathang/index.php">Danh mục SP - ĐĐH</a>
           </li>
-          <li class="nav-item sidebarSubMenu-list" >
-            <a href="/dienmay.vn/backend/xuatbaocao/index.php">Xuất báo cáo</a>
+          <li class="nav-item btn btn-light list-category" >
+            <a href="/dienmay.vn/backend/xuatbaocao/khachhang/index.php">Xuất báo cáo KH</a>
           </li>
+          <li class="nav-item btn btn-light list-category" >
+            <a href="/dienmay.vn/backend/xuatbaocao/sanpham/index.php">Xuất báo cáo SP</a>
+          </li>
+
+
         </ul>
       </li>
-      <!-- End Menu KHU VỰC -->
+      <!-- End Menu KHU VỰC QUẢN TRỊ-->
 
       <!-- Menu KHU VỰC NHÂN VIÊN -->
       <li class="nav-item">
-        <a href="#cdgySubMenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle btn btn-info">
+        <a href="#nvSubMenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle btn btn-info">
           KHU VỰC NHÂN VIÊN
         </a>
-        <ul class="collapse" id="cdgySubMenu">
-          <li class="nav-item sidebarSubMenu-list">
-            <a href="/backend/chudegopy/index.php">Danh sách</a>
+        <ul class="collapse pd-0" id="nvSubMenu" >
+          <li class="nav-item sidebarSubMenu-list btn btn-light list-category" >
+            <a href="/dienmay.vn/backend/khachhang/index.php">Danh mục Khách hàng</a>
           </li>
-          <li class="nav-item">
-            <a href="/backend/chudegopy/create.php">Thêm mới</a>
+          <li class="nav-item sidebarSubMenu-list btn btn-light list-category" >
+            <a href="/dienmay.vn/backend/chudegopy/index.php">Danh mục Chủ đề GY</a>
           </li>
+          <li class="nav-item sidebarSubMenu-list btn btn-light list-category" >
+            <a href="/dienmay.vn/backend/gopy/index.php">Danh mục Góp ý</a>
+          </li>
+          <li class="nav-item sidebarSubMenu-list btn btn-light list-category" >
+            <a href="/dienmay.vn/backend/dondathang/index.php">Danh mục Đơn đặt hàng</a>
+          </li>
+          <li class="nav-item sidebarSubMenu-list btn btn-light list-category" >
+            <a href="/dienmay.vn/backend/hinhsanpham/index.php">Danh mục Hình SP</a>
+          </li>
+          <li class="nav-item sidebarSubMenu-list btn btn-light list-category" >
+            <a href="/dienmay.vn/backend/videosanpham/index.php">Danh mục Video SP</a>
+          </li>
+          <li class="nav-item sidebarSubMenu-list btn btn-light list-category" >
+            <a href="/dienmay.vn/backend/hinhthucthanhtoan/index.php">Danh mục HTTT</a>
+          </li>
+          <li class="nav-item sidebarSubMenu-list btn btn-light list-category" >
+            <a href="/dienmay.vn/backend/khuyenmai/index.php">Danh mục Khuyến mãi</a>
+          </li>
+          <li class="nav-item sidebarSubMenu-list btn btn-light list-category" >
+            <a href="/dienmay.vn/backend/loaisanpham/index.php">Danh mục Loại sản phẩm</a>
+          </li>
+          <li class="nav-item sidebarSubMenu-list btn btn-light list-category" >
+            <a href="/dienmay.vn/backend/nhasanxuat/index.php">Danh mục Nhà sản xuất</a>
+          </li>
+          <li class="nav-item sidebarSubMenu-list btn btn-light list-category" >
+            <a href="/dienmay.vn/backend/sanpham/index.php">Danh mục Sản phẩm</a>
+          </li>
+          <li class="nav-item sidebarSubMenu-list btn btn-light list-category" >
+            <a href="/dienmay.vn/backend/sanpham-dondathang/index.php">Danh mục SP - ĐĐH</a>
+          </li>
+          <li class="nav-item btn btn-light list-category" >
+            <a href="/dienmay.vn/backend/xuatbaocao/khachhang/index.php">Xuất báo cáo KH</a>
+          </li>
+          <li class="nav-item btn btn-light list-category" >
+            <a href="/dienmay.vn/backend/xuatbaocao/sanpham/index.php">Xuất báo cáo SP</a>
+          </li>
+
+
         </ul>
       </li>
-      <!-- End Menu KHU VỰC QUẢN LÝ -->
+      <!-- End Menu KHU VỰC NHÂN VIÊN -->
 
       <!-- #################### End Menu chức năng Danh mục #################### -->
     </ul>
