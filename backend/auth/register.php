@@ -54,21 +54,24 @@
                             <a href="/dienmay.vn/backend/auth/login.php" title="Đăng nhập" class="top-title--login">Đăng nhập</a>
                             <a href="/dienmay.vn/backend/auth/register.php" title="Đăng ký" class="active">Đăng ký</a>
                         </div>
-                        <form action="" class="frmRegister" id="frmRegister">
+                        <form method="post" action="" class="frmRegister" id="frmRegister">
                             <div class="box box-username">
-                                <input type="text" name="" id="username" class="form-control" placeholder="Tài khoản*">
+                                <input type="text" name="kh_tendangnhap" id="kh_tendangnhap" class="form-control" placeholder="Tài khoản*">
                             </div>
                             <div class="box box-fullname">
-                                <input type="text" name="" id="fullname" class="form-control" placeholder="Họ và tên*">
+                                <input type="text" name="kh_ten" id="kh_ten" class="form-control" placeholder="Họ và tên*">
                             </div>
                             <div class="box box-phone-number">
-                                <input type="text" name="" id="phone-number" class="form-control" placeholder="Số điện thoại*">
+                                <input type="text" name="kh_dienthoai" id="kh_dienthoai" class="form-control" placeholder="Số điện thoại*">
                             </div>
                             <div class="box box-email">
-                                <input type="email" name="" id="email" class="form-control" placeholder="Nhập địa chỉ Email*">
+                                <input type="email" name="kh_email" id="kh_email" class="form-control" placeholder="Nhập địa chỉ Email*">
                             </div>
                             <div class="box box-password">
-                                <input type="password" name="" id="password" class="form-control" placeholder="Mật khẩu*" ></input>
+                                <input type="password" name="kh_matkhau" id="kh_matkhau" class="form-control" placeholder="Mật khẩu*" ></input>
+                            </div>
+                            <div class="box box-password">
+                                <input type="password" name="kh_nhaplaimatkhau" id="kh_nhaplaimatkhau" class="form-control" placeholder="Nhập lại Mật khẩu*" ></input>
                             </div>
                             <div class="box-forgot d-flex justify-content-end">
                                 <a href="https://didongthongminh.vn/quen-mat-khau" title="Quên mật khẩu?" class="forgot-password  mr-3 mt-0 mb-0">
@@ -76,7 +79,8 @@
                                 </a>
                             </div>
                             <div class="box-register">
-                                <a href="" class="submitRegister submit-btn">Tạo tài khoản</a>
+                                <!-- <a href="" class="submitRegister submit-btn">Tạo tài khoản</a> -->
+                                <button class="submitRegister submit-btn" name="submitRegister">Tạo tài khoản</button>
                             </div>
                         </form>
                         <div class="wrapper">
@@ -93,7 +97,48 @@
             <div class="col-md-2"></div>
         </div>
 
+        <?php
+                    // Hiển thị tất cả lỗi trong PHP
+                    // Chỉ nên hiển thị lỗi khi đang trong môi trường Phát triển (Development)
+                    // Không nên hiển thị lỗi trên môi trường Triển khai (Production)
+                    ini_set('display_errors', 1);
+                    ini_set('display_startup_errors', 1);
+                    error_reporting(E_ALL);
 
+                    // Truy vấn database
+                    // 1. Include file cấu hình kết nối đến database, khởi tạo kết nối $conn
+                    include_once(__DIR__ . '/../../dbconnect.php');
+
+                    // Chưa đăng nhập -> Xử lý logic/nghiệp vụ kiểm tra Tài khoản và Mật khẩu trong database
+                    if (isset($_POST['submitRegister'])) {
+                         // Xử lý đăng ký
+                        // Lấy dữ liệu người dùng hiệu chỉnh gởi từ REQUEST POST
+                        $kh_tendangnhap = htmlentities($_POST['kh_tendangnhap']);
+                        $kh_ten = htmlentities($_POST['kh_ten']);
+                        $kh_dienthoai = htmlentities($_POST['kh_dienthoai']);
+                        $kh_email = htmlentities($_POST['kh_email']);
+                        $kh_matkhau = sha1($_POST['kh_matkhau']);
+                        $kh_makichhoat = 0;
+                        $kh_trangthai = 0; // Mặc định khi đăng ký sẽ chưa kích hoạt tài khoản
+                        $kh_quantri = 0; // Mặc định khi đăng ký sẽ không có quyền quản trị
+                        $kh_quanly = 0; // Mặc định khi đăng ký sẽ không có quyền quản lý
+                          // Câu lệnh INSERT
+                        $sql = "INSERT INTO khachhang(kh_tendangnhap, kh_ten, kh_matkhau, kh_dienthoai, kh_email, kh_makichhoat, kh_trangthai, kh_quantri, kh_quanly) VALUES ('$kh_tendangnhap', '$kh_ten', '$kh_matkhau', '$kh_dienthoai', '$kh_email', '$kh_makichhoat', $kh_trangthai, $kh_quantri, $kh_quanly)";
+                        // var_dump($sql);
+                        // die;
+                        // Thực thi SELECT
+                        $result = mysqli_query($conn, $sql);
+
+                        // Luu Section
+                        $_SESSION['kh_tendangnhap_logged'] = $kh_tendangnhap;
+
+                        echo 'Đăng ký thành công!';
+                        // Điều hướng (redirect) về trang chủ
+                        echo '<script>location.href = "/dienmay.vn/index.php";</script>';
+                    }
+                    
+
+                ?>
         
    
 
