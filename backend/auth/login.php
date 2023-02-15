@@ -1,3 +1,11 @@
+<?php
+// hàm `session_id()` sẽ trả về giá trị SESSION_ID (tên file session do Web Server tự động tạo)
+// - Nếu trả về Rỗng hoặc NULL => chưa có file Session tồn tại
+if (session_id() === '') {
+    // Yêu cầu Web Server tạo file Session để lưu trữ giá trị tương ứng với CLIENT (Web Browser đang gởi Request)
+    session_start();
+}
+?>
 <!DOCTYPE html>
 <html>
 
@@ -54,12 +62,12 @@
                             <a href="/dienmay.vn/backend/auth/login.php" title="Đăng nhập" class="active">Đăng nhập</a>
                             <a href="/dienmay.vn/backend/auth/register.php" title="Đăng ký" class="top-title--register">Đăng ký</a>
                         </div>
-                        <form action="" class="frmLogin" id="frmLogin">
+                        <form  class="frmLogin" id="frmLogin" method="post" action="">
                             <div class="box box-email">
-                                <input type="email" name="" id="email" class="form-control" placeholder="Email đăng nhập*">
+                                <input type="kh_tendangnhap"  name="kh_tendangnhap" class="form-control" placeholder="Email / tên đăng nhập*">
                             </div>
                             <div class="box box-password">
-                                <input type="password" name="" id="password" class="form-control" placeholder="Mật khẩu*" ></input>
+                                <input type="kh_matkhau"  name="kh_matkhau" class="form-control" placeholder="Mật khẩu*" ></input>
                             </div>
                             <div class="box-forgot">
                                 <div class="box-remember">
@@ -70,8 +78,11 @@
                                 Quên mật khẩu?
                                 </a>
                             </div>
-                            <div class="box-login">
-                                <a href="" class="submitLogin submit-btn">Đăng nhập</a>
+                            <div class="box-login" >
+                                <button class="submitLogin submit-btn" name="btnLogin" id="btnLogin">
+                                    Đăng nhập
+                                </button>
+                                <!-- <a  class="submitLogin submit-btn" name="btnLogin" id="btnLogin" >Đăng nhập</a> -->
                             </div>
                         </form>
                         <div class="wrapper">
@@ -91,6 +102,60 @@
             <div class="col-md-2"></div>
         </div>
 
+        <?php
+                    // Hiển thị tất cả lỗi trong PHP
+                    // Chỉ nên hiển thị lỗi khi đang trong môi trường Phát triển (Development)
+                    // Không nên hiển thị lỗi trên môi trường Triển khai (Production)
+                    ini_set('display_errors', 1);
+                    ini_set('display_startup_errors', 1);
+                    error_reporting(E_ALL);
+
+                    // Truy vấn database
+                    // 1. Include file cấu hình kết nối đến database, khởi tạo kết nối $conn
+                    include_once(__DIR__ . '/../../dbconnect.php');
+                   
+  
+
+                    // Chưa đăng nhập -> Xử lý logic/nghiệp vụ kiểm tra Tài khoản và Mật khẩu trong database
+                    if (isset($_POST['btnLogin'])) {
+                        // Phân tách thông tin từ người dùng gởi đến qua Request POST
+                        $kh_tendangnhap = $_POST['kh_tendangnhap'];
+                        $kh_matkhau = $_POST['kh_matkhau'];
+
+                        // Câu lệnh SELECT Kiểm tra đăng nhập...
+                        $sqlSelect ="
+                        SELECT *
+                        FROM khachhang kh
+                        WHERE kh.kh_tendangnhap = '$kh_tendangnhap' AND kh.kh_matkhau = '$kh_matkhau';";
+
+                        // Thực thi SELECT
+                        $result = mysqli_query($conn, $sqlSelect);
+
+                        $data = [];
+                        while($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
+                            $data[] = array (
+                                'kh_tendangnhap' => $row['kh_tendangnhap'],
+                                'kh_quantri' => $row['kh_quantri'],
+                                'kh_quanly' => $row['kh_quanly'],
+                            );
+                            }
+                        // var_dump($data);
+                        // die;
+                            if (mysqli_num_rows($result) > 0)  {
+                                // Lưu thông tin Tên tài khoản user đã đăng nhập
+                                $_SESSION['kh_tendangnhap_logged'] = $kh_tendangnhap;
+                                echo 'Đăng nhập thành công!';
+                                // Điều hướng (redirect) về trang chủ
+                                echo '<script>location.href = "/dienmay.vn/backend/pages/dashboard.php";</script>';
+                               
+                            } else {
+                                echo '<h2 style="color: red;">Đăng nhập thất bại!</h2>';
+                            }
+                            
+                        }
+                   
+                   
+                ?>
 
         
    
